@@ -9,7 +9,7 @@ import { UserModule } from './user/user.module';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.MONGO_URI, {
+    MongooseModule.forRoot('mongodb://localhost:27017/courses', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
